@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('read_at')->nullable();
             $table->boolean('is_deleted')->default(false);
             $table->boolean('is_favorite')->default(false);
-            $table->varchar('reaction', 20)->nullable();
+            $table->string('reaction', 20)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

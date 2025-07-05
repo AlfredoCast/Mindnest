@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 150);
             $table->text('description')->nullable();
             $table->decimal('duration', 5, 2)->nullable();
-            $table->varchar('status', 20);
+            $table->string('status', 20);
             $table->enum('type', ['quiz', 'midterm', 'final']);
             $table->boolean('is_published')->default(false);
             $table->unsignedInteger('view_count')->default(0);

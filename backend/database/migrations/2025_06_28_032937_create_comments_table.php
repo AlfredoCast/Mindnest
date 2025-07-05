@@ -20,7 +20,7 @@ return new class extends Migration
             $table->boolean('is_deleted')->default(false);
             $table->unsignedInteger('deleted_by_user_id')->nullable();
             $table->unsignedInteger('parent_comment_id')->nullable();
-            $table->varchar('attachment_url', 255)->nullable();
+            $table->string('attachment_url', 255)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
