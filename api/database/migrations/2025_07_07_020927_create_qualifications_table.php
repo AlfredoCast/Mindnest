@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal('score', 5, 2);
             $table->text('comment')->nullable();
             $table->timestamps('graded_at')->nullable();
-            $table->string('status', 20)->default('pending');
+            $table->string('status', 20)->default('in_review');
             $table->timestamps();
         });
     }

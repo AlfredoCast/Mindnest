@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('title', 150);
             $table->text('description')->nullable();
             $table->decimal('duration', 5, 2)->nullable();
-            $table->string('status', 20);
-            $table->enum('type', ['quiz', 'midterm', 'final']);
+            $table->string('status')->default('draft'); // Using ActivityStatusEnum values
+            $table->string('type')->default('quiz'); // Assuming 'quiz' is a common type
             $table->boolean('is_published')->default(false);
             $table->unsignedInteger('view_count')->default(0);
-            $table->enum('difficulty', ['easy', 'medium', 'hard']);
+            $table->string('difficulty_level')->default('easy'); // Using ExamDifficultyLevelEnum values
             $table->unsignedInteger('max_attempts')->default(1)->nullable();
             $table->decimal('max_score', 5, 2);
             $table->timestamps();

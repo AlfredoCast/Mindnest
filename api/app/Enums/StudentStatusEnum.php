@@ -4,9 +4,9 @@ namespace App\Enums;
 
 enum StudentStatusEnum: string
 {
-    case ENROLLED = 'enrolled';
-    case GRADUATED = 'graduated';
-    case BLOCKED = 'blocked';
+    case ACTIVE = 'active';
+    case INACTIVE = 'inactive';
+    case SUSPENDED = 'suspended';
 
     public static function getValues(): array
     {

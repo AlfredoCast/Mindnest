@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->boolean('visible')->default(true);
-            $table->string('status', 20);
+            $table->string('status', 20)->default('draft'); // Using ActivityStatusEnum values
             $table->boolean('is_published')->default(true);
             $table->timestamps();
             $table->softDeletes();
