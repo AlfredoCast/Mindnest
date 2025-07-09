@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('student_id')->nullable();
             $table->unsignedBigInteger('course_id')->nullable();
             $table->decimal('amount', 10, 2);
+            $table->string('payment_method')->nullable();
             $table->string('status', 20)->default('pending'); // Using PaymentStatus
             $table->timestamp('paid_at')->nullable();
             $table->boolean('paid_late')->default(false);
